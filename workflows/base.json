@@ -1,0 +1,196 @@
+{
+  "id": "c77a0793-dc2a-4c71-a1c8-d554e6e1b970",
+  "revision": 0,
+  "last_node_id": 4,
+  "last_link_id": 3,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "MDMModelLoader",
+      "pos": [
+        363.36328125,
+        209.6484375
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "mdm_pipeline",
+          "type": "MDM_PIPELINE",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "PozzettiAndrea/ComfyUI-MotionDiffusionModel",
+        "ver": "a3b9f5597cf04a6913de95462793232668fb1930",
+        "Node name for S&R": "MDMModelLoader"
+      },
+      "widgets_values": [
+        "",
+        "cuda",
+        true
+      ]
+    },
+    {
+      "id": 2,
+      "type": "MDMGenerateMotion",
+      "pos": [
+        732.62109375,
+        216.8828125
+      ],
+      "size": [
+        400,
+        208
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mdm_pipeline",
+          "type": "MDM_PIPELINE",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "motion",
+          "type": "MDM_MOTION",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "PozzettiAndrea/ComfyUI-MotionDiffusionModel",
+        "ver": "a3b9f5597cf04a6913de95462793232668fb1930",
+        "Node name for S&R": "MDMGenerateMotion"
+      },
+      "widgets_values": [
+        "a person walks forward",
+        6,
+        2.5,
+        200837455,
+        "randomize",
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "type": "PreviewImage",
+      "pos": [
+        1531.29296875,
+        250.9609375
+      ],
+      "size": [
+        140,
+        26
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.68",
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 3,
+      "type": "MDMMotionPreview",
+      "pos": [
+        1176.69140625,
+        241.45703125
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "motion",
+          "type": "MDM_MOTION",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "preview_images",
+          "type": "IMAGE",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "PozzettiAndrea/ComfyUI-MotionDiffusionModel",
+        "ver": "a3b9f5597cf04a6913de95462793232668fb1930",
+        "Node name for S&R": "MDMMotionPreview"
+      },
+      "widgets_values": [
+        0,
+        8,
+        110,
+        -90
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "MDM_PIPELINE"
+    ],
+    [
+      2,
+      2,
+      0,
+      3,
+      0,
+      "MDM_MOTION"
+    ],
+    [
+      3,
+      3,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        -110.9296875,
+        -0.61328125
+      ]
+    },
+    "frontendVersion": "1.28.8"
+  },
+  "version": 0.4
+}

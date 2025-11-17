@@ -1,0 +1,24 @@
+Looking in indexes: https://mcache-dsm.massedcompute.com/simple, https://pypi.org/simple
+Collecting gdown
+  Downloading gdown-5.2.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting beautifulsoup4 (from gdown)
+  Downloading beautifulsoup4-4.14.2-py3-none-any.whl.metadata (3.8 kB)
+Requirement already satisfied: filelock in /home/shadeform/miniconda3/envs/mdm/lib/python3.10/site-packages (from gdown) (3.20.0)
+Requirement already satisfied: requests[socks] in /home/shadeform/miniconda3/envs/mdm/lib/python3.10/site-packages (from gdown) (2.32.5)
+Requirement already satisfied: tqdm in /home/shadeform/miniconda3/envs/mdm/lib/python3.10/site-packages (from gdown) (4.67.1)
+Collecting soupsieve>1.2 (from beautifulsoup4->gdown)
+  Downloading soupsieve-2.8-py3-none-any.whl.metadata (4.6 kB)
+Requirement already satisfied: typing-extensions>=4.0.0 in /home/shadeform/miniconda3/envs/mdm/lib/python3.10/site-packages (from beautifulsoup4->gdown) (4.15.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in /home/shadeform/miniconda3/envs/mdm/lib/python3.10/site-packages (from requests[socks]->gdown) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in /home/shadeform/miniconda3/envs/mdm/lib/python3.10/site-packages (from requests[socks]->gdown) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/shadeform/miniconda3/envs/mdm/lib/python3.10/site-packages (from requests[socks]->gdown) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in /home/shadeform/miniconda3/envs/mdm/lib/python3.10/site-packages (from requests[socks]->gdown) (2025.11.12)
+Collecting PySocks!=1.5.7,>=1.5.6 (from requests[socks]->gdown)
+  Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+Downloading gdown-5.2.0-py3-none-any.whl (18 kB)
+Downloading beautifulsoup4-4.14.2-py3-none-any.whl (106 kB)
+Downloading soupsieve-2.8-py3-none-any.whl (36 kB)
+Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+Installing collected packages: soupsieve, PySocks, beautifulsoup4, gdown
+
+Successfully installed PySocks-1.7.1 beautifulsoup4-4.14.2 gdown-5.2.0 soupsieve-2.8

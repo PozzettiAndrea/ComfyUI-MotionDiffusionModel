@@ -1,0 +1,1 @@
+# SMPL body model package
